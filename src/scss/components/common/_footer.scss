@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.1rem solid var(--clr-default-300);
+  min-height: 21rem;
+
+  @media (max-width: em(992)) {
+    min-height: 10rem;
+  }
+
+  @media (max-width: em(575)) {
+    min-height: 8rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,160 @@
+// <МИКСИНЫ>==================================================================
+@import "./settings/mixins";
+
+// </МИКСИНЫ>=================================================================
+
+// ФУНКЦИИ====================================================================
+@import "./settings/functions";
+
+// </ФУНКЦИИ>=================================================================
+
+// <Подключаем шрифты>========================================================
+@import "./settings/fonts";
+
+// </Подключаем шрифты>=======================================================
+
+// <ОБНУЛЕНИЕ>================================================================
+@import "./settings/normalize";
+
+// </ОБНУЛЕНИЕ>===============================================================
+
+// <ПЕРЕМЕННЫЕ>===============================================================
+$containerWidth: 121rem;
+
+:root {
+  // base
+  --font-family: "Poppins", sans-serif;
+  --font-weight: 400;
+  --content-width: 118rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  // colors
+  --clr-default-100: #fff;
+  --clr-default-200: #a6a6a6;
+  --clr-default-300: rgba(255, 255, 255, 0.15);
+  --clr-default-400: rgba(255, 255, 255, 0.1);
+  --clr-default-500: rgba(142, 142, 142, 0.1);
+  --clr-default-600: #001833;
+  --clr-default-700: #081d36;
+  --clr-default-800: #0c3464;
+  --clr-default-850: #1a2f48;
+  --clr-default-900: #000;
+  --clr-primary-400: #39414a;
+  --clr-primary-500: #2b497c;
+  --clr-primary-600: #0069e5;
+  --clr-primary-700: #022650;
+}
+
+// </ПЕРЕМЕННЫЕ>==============================================================
+
+// <ОБОЛОЧКИ>================================================================
+body {
+  font-size: 1.8rem;
+  color: var(--clr-default-100);
+  background-color: var(--clr-default-600);
+
+  &.lock {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-width: 32rem;
+  min-height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgb(0 0 0 / 50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &[data-overlay="true"]::before {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+// </ОБОЛОЧКИ>===============================================================
+
+// <СЕТКА>===================================================================
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+// Components - UI
+@import "./ui";
+
+// Components - UI
+
+// Components - UI
+@import "./components/ui/menu";
+@import "./components/ui/logo";
+@import "./components/ui/language";
+@import "./components/ui/burger";
+
+// Components - UI
+
+// Components - Common
+@import "./components/common/header";
+@import "./components/common/footer";
+
+// Components - Common
+
+// Components - Pages
+@import "./components/indexPage/hero";
+@import "./components/indexPage/info";
+@import "./components/indexPage/app";
+@import "./components/indexPage/benefits";
+@import "./components/indexPage/register";
+@import "./components/indexPage/device";
+@import "./components/indexPage/download";
+@import "./components/indexPage/desktop";
+@import "./components/indexPage/bonus";
+@import "./components/indexPage/vip";
+@import "./components/indexPage/slots";
+@import "./components/indexPage/other";
+@import "./components/indexPage/live";
+@import "./components/indexPage/vpn";
+@import "./components/indexPage/support";
+@import "./components/indexPage/license";
+@import "./components/indexPage/review";
+@import "./components/common/faq";
+@import "./components/indexPage/final";
+
+// Components - Pages
+
+// </СЕТКА>==================================================================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================

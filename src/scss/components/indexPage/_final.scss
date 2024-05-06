@@ -1,0 +1,27 @@
+.final {
+  padding-bottom: 16rem;
+
+  @media (max-width: em(992)) {
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-bottom: 5rem;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    margin-bottom: 6rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+}

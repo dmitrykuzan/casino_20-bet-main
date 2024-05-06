@@ -1,0 +1,11 @@
+.vip {
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.desktop {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-right: 2rem;
+    max-width: 58rem;
+
+    @media (max-width: em(1200)) {
+      max-width: 52rem;
+    }
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    max-width: 48rem;
+
+    @media (max-width: em(1200)) {
+      flex-shrink: initial;
+    }
+
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.slots {
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    margin-bottom: 6rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__table {
+    overflow: auto;
+    border-radius: 1.2rem;
+
+    table {
+      overflow: hidden;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: var(--clr-default-500);
+
+      th {
+        padding-top: 1.6rem;
+        padding-right: 1.2rem;
+        padding-bottom: 1.6rem;
+        padding-left: 1.2rem;
+        font-weight: 400;
+        text-align: start;
+        color: #c9c9c9;
+      }
+    }
+
+    table {
+      overflow: hidden;
+      border-collapse: collapse;
+      min-width: 100%;
+
+      tbody {
+
+        tr {
+          background-color: var(--clr-default-400);
+          &:nth-child(even) {
+            background-color: var(--clr-default-500);
+          }
+        }
+
+        td {
+          padding-top: 1.6rem;
+          padding-right: 1.2rem;
+          padding-bottom: 1.6rem;
+          padding-left: 1.2rem;
+
+          &:first-child {
+           min-width: 28rem;
+
+           @media (max-width: em(1200)) {
+            min-width: 23rem;
+           }
+          }
+          &:nth-child(2) {
+            min-width: 28rem;
+            @media (max-width: em(1200)) {
+              min-width: 15rem;
+             }
+          }
+          &:nth-child(3) {
+            min-width: 18rem;
+            @media (max-width: em(1200)) {
+              min-width: 10rem;
+             }
+          }
+          &:nth-child(4) {
+            min-width: 18rem;
+            @media (max-width: em(1200)) {
+              min-width: 10rem;
+             }
+          }
+          &:nth-child(5) {
+            min-width: 18rem;
+            @media (max-width: em(1200)) {
+              min-width: 10rem;
+             }
+          }
+        }
+      }
+    }
+  }
+}

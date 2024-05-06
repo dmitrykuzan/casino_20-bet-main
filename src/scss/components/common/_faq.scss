@@ -1,0 +1,124 @@
+.faq {
+  &__title {
+    margin-bottom: 6rem;
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+
+      @media (max-width: em(992)) {
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: em(575)) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &.active {
+      .faq__question {
+        &::after {
+          transform: rotate(-180deg) translateY(50%);
+          transition: transform var(--transition);
+        }
+      }
+
+      .faq__answer {
+        padding-top: 3.2rem;
+        font-weight: 400;
+        font-size: fluid-font(1.8rem, 1.6rem);
+        transition: max-height var(--transition), padding-top var(--transition);
+
+        @media (max-width: em(992)) {
+          padding: 2rem;
+        }
+
+        @media (max-width: em(575)) {
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    border-radius: 1.2rem;
+    padding-top: 2.5rem;
+    padding-right: 9rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: fluid-font(2.8rem, 1.6rem);
+    line-height: 150%;
+    color: var(--clr-default-100);
+    background-color: var(--clr-default-400);
+    backdrop-filter: blur(35px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3.6rem;
+      top: 50%;
+      width: 2.5rem;
+      height: 1.5rem;
+      background-image: url(../img/ui/faq-arrow.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: transform var(--transition);
+
+      @media (max-width: em(767)) {
+        width: 1.8rem;
+        height: 1rem;
+      }
+
+      @media (max-width: em(575)) {
+        right: 1.5rem;
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 1.5rem;
+      padding-right: 6rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__answer {
+    overflow: hidden;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    max-width: 78rem;
+    max-height: 0;
+    box-sizing: content-box;
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+    transition: max-height var(--transition), padding-top var(--transition);
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    ol {
+      list-style: decimal;
+      margin-left: 2rem;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+}

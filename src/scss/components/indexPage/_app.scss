@@ -1,0 +1,58 @@
+.app {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin-right: 2rem;
+    max-width: 48rem;
+
+    @media (max-width: em(1200)) {
+      min-width: initial;
+      max-width: 48rem;
+    }
+
+    @media (max-width: em(992)) {
+      margin-right: 0;
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    margin-bottom: 6rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: em(992)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -31rem;
+    top: 0;
+    max-width: 98.4rem;
+
+    @media (max-width: em(1680)) {
+      right: -3rem;
+      max-width: 67.4rem;
+    }
+
+    @media (max-width: em(1200)) {
+      position: initial;
+    }
+
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}
